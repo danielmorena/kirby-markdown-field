@@ -9,7 +9,7 @@ Based on [CodeMirror](https://codemirror.net/2/), the syntax highlighting and fi
 Similar to the `textarea` field, the `markdown` field supports:
 - Drag & Drop from the sidebar
 - `readonly` and `placeholder` field options
-- `required `,`minLength` and `maxLength` field validations
+- `required`, `minLength` and `maxLength` field validations
 
 ## Installation
 
@@ -43,7 +43,6 @@ fields:
 ```php
 <?php echo $page->text()->kirbytext() ?>
 ```
-
 
 ## Changelog
 
