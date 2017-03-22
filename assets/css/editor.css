@@ -81,13 +81,13 @@
 .cm-header-1,
 .cm-header-1 ~ .cm-tag{
 	font-size: 140%;
-	line-height: 1.8;
+	line-height: 1.6;
 }
 
 .cm-header-2,
 .cm-header-2 ~ .cm-tag{
 	font-size: 120%;
-	line-height: 1.8;
+	line-height: 1.6;
 }
 
 .cm-em{ 
