@@ -2,7 +2,7 @@
 
 A textarea field for [Kirby CMS](https://github.com/getkirby/starterkit) with syntax highlighting for Markdown and Kirbytext.
 
-![Screenshot](screenshot.png)
+<img src="screenshot.png" alt="Screenshot" width="75%">
 
 Based on [CodeMirror](https://codemirror.net/2/), the syntax highlighting and field style matches the overall look of the Panel.
 
