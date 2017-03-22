@@ -29,6 +29,7 @@ class MarkdownField extends TextField {
 		$input->removeAttr('value');
 		$input->html($this->value() ? htmlentities($this->value(), ENT_NOQUOTES, 'UTF-8') : false);
 		$input->data('field', 'markdown');
+		$input->removeAttr('required');
 
 		return $input;
 	}

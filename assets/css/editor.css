@@ -38,6 +38,10 @@
 	border-color: #000
 }
 
+.field-with-error .codemirror{
+	border-color: #b3000a;
+}
+
 .CodeMirror{
 	height: auto;
 	min-height: 3.25em;

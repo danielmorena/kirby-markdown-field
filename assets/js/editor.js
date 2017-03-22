@@ -37,7 +37,7 @@ var MarkdownField = function($field){
 
 	// Initialize Codemirror
 	var textarea = $field.get(0);
-	var codemirror = textarea.parentNode.querySelector('.field-with-codemirror .codemirror');
+	var codemirror = textarea.parentNode.querySelector('.codemirror');
 	var readOnly = codemirror.classList.contains('codemirror-is-readonly');
 	var disabled = codemirror.classList.contains('codemirror-is-disabled');
 
