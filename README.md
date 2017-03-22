@@ -2,6 +2,8 @@
 
 A textarea field for [Kirby CMS](https://github.com/getkirby/starterkit) with syntax highlighting for Markdown and Kirbytext.
 
+![Screenshot](screenshot.png)
+
 Based on [CodeMirror](https://codemirror.net/2/), the syntax highlighting and field style matches the overall look of the Panel.
 
 Similar to the `textarea` field, the `markdown` field supports:
@@ -37,7 +39,7 @@ fields:
 
 **Within a template:**
 
-```php
+```html
 <article>
 	<?php echo $page->text()->kirbytext() ?>
 </article>
