@@ -18,7 +18,7 @@ Clone or download:
 1. [Clone](https://github.com/sebastianeberlein/kirby-markdown-field.git) or [download](https://github.com/sebastianeberlein/kirby-markdown-field/archive/master.zip) this repository.
 2. Unzip the archive if needed and rename the folder to `markdown`.
 
-**Make sure that the field folder structure looks like this:**
+Make sure that the field folder structure looks like this:
 
 ```text
 site/fields/markdown/assets/
