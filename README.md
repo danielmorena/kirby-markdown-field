@@ -8,7 +8,8 @@ Based on [CodeMirror](https://codemirror.net/2/), the syntax highlighting and fi
 
 Similar to the `textarea` field, the `markdown` field supports:
 - Drag & Drop from the sidebar
-- `required`, `readonly` and `placeholder` field options
+- `readonly` and `placeholder` field options
+- `required `,`minLength` and `maxLength` field validations
 
 ## Installation
 
