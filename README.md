@@ -4,7 +4,7 @@ A textarea field for [Kirby CMS](https://github.com/getkirby/starterkit) with sy
 
 <img src="screenshot.png" alt="Screenshot" width="75%">
 
-Based on [CodeMirror](https://codemirror.net/2/), the syntax highlighting and field style matches the overall look of the Panel.
+The editor and syntax highlighting is based on [CodeMirror](https://codemirror.net/2/). The field style and color scheme matches the overall look of the Panel.
 
 Similar to the `textarea` field, the `markdown` field supports:
 - Drag & Drop from the sidebar
