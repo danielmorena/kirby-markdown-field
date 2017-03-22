@@ -54,6 +54,11 @@ var MarkdownField = function($field){
 		highlightFormatting: true
 	};
 
+	// Add placeholder
+	if (textarea.hasAttribute('placeholder')) {
+		options.placeholder = textarea.getAttribute('placeholder');
+	}
+
 	if(readOnly || disabled) {
 		options.readOnly = true;
 		options.cursorHeight = 0;

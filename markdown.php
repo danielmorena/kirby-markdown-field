@@ -9,6 +9,7 @@ class MarkdownField extends TextField {
 		),
 		'js' => array(
 			'codemirror.js',
+			'placeholder.js',
 			'overlay.js',
 			'simple.js',
 			'xml.js',

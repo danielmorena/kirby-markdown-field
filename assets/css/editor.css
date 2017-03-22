@@ -66,6 +66,10 @@
 	background: #b4d5fe;
 }
 
+.CodeMirror-lines .CodeMirror-placeholder{
+	color: rgba(0,0,0,0.33);
+}
+
 
 /* Theme */
 
