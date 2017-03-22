@@ -1,0 +1,118 @@
+.field-with-codemirror textarea.input{
+	display: none;
+}
+
+.codemirror{
+	font-size: 1rem;
+	padding: 0.5em;
+	padding-bottom: 0.75em;
+	line-height: 1.5;
+	font-weight: 400;
+	border: 2px solid #ddd;
+	background: #fff;
+}
+
+@media screen and (min-width: 50em){
+	.codemirror{
+		padding: 0.75em;
+		padding-bottom: 0.875em;
+	}
+}
+
+.codemirror-is-readonly{
+	background: #efefef;
+	border-color: #ddd;
+	color: #777;
+}
+
+.codemirror-is-disabled{
+	color: #545454;
+}
+
+.codemirror-focus{
+	outline: 0;
+	border-color: #8dae28;
+}
+
+.codemirror-over{
+	border-color: #000
+}
+
+.CodeMirror{
+	height: auto;
+	min-height: 3.25em;
+	background: transparent;
+	color: inherit;
+}
+
+.CodeMirror-lines,
+.CodeMirror pre{
+	padding: 0;
+}
+
+.CodeMirror-focused .CodeMirror-selected{
+	background: #b4d5fe;
+}
+
+.CodeMirror-line::selection, .CodeMirror-line > span::selection, .CodeMirror-line > span > span::selection{ 
+	background: #b4d5fe;
+}
+
+.CodeMirror-line::-moz-selection, .CodeMirror-line > span::-moz-selection, .CodeMirror-line > span > span::-moz-selection{ 
+	background: #b4d5fe;
+}
+
+
+/* Theme */
+
+.cm-header,
+.cm-strong{ 
+	font-weight: 600;
+}
+
+.cm-header-1,
+.cm-header-1 ~ .cm-tag{
+	font-size: 140%;
+	line-height: 1.8;
+}
+
+.cm-header-2,
+.cm-header-2 ~ .cm-tag{
+	font-size: 120%;
+	line-height: 1.8;
+}
+
+.cm-em{ 
+	font-style: italic;
+}
+
+.cm-image-alt-text{
+	text-decoration: none;
+}
+
+.cm-formatting-header{
+	font-weight: normal;
+}
+
+.cm-kirbytext,
+.cm-link,
+.cm-image-marker{
+	color: #8dae28;
+}
+
+.cm-hr,
+.cm-tag,
+.cm-attribute,
+.cm-string,
+.cm-comment,
+.cm-formatting-header,
+.cm-formatting-list,
+.cm-formatting-quote,
+.cm-formatting-code{
+	color: rgba(0,0,0,0.33);
+}
+
+.cm-error,
+.cm-invalidchar{ 
+	color: #b3000a;
+}
