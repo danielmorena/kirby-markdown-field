@@ -40,10 +40,8 @@ fields:
 
 **Within a template:**
 
-```html
-<article>
-	<?php echo $page->text()->kirbytext() ?>
-</article>
+```php
+<?php echo $page->text()->kirbytext() ?>
 ```
 
 
