@@ -40,6 +40,7 @@ var MarkdownField = function($field){
 	var codemirror = textarea.parentNode.querySelector('.codemirror');
 	var readOnly = codemirror.classList.contains('codemirror-is-readonly');
 	var disabled = codemirror.classList.contains('codemirror-is-disabled');
+	var hasCounter = textarea.parentNode.parentNode.querySelector('.field-counter');
 
 	var options = {};
 	options.value = textarea.value;
@@ -69,6 +70,9 @@ var MarkdownField = function($field){
 	if (!readOnly && !disabled) {
 		editor.on('change', function() {
 			textarea.value = editor.getValue();
+
+			// Enable minLength and maxLength validation
+			if (hasCounter) $(textarea).trigger('keyup');
 		})
 
 		editor.on('focus', function(){
