@@ -1,0 +1,8 @@
+{
+  "name": "markdown",
+  "description": "A textarea field for Kirby CMS with syntax highlighting for Markdown and Kirbytext",
+  "author": "Sebastian Eberlein",
+  "license": "MIT",
+  "version": "0.1.0",
+  "type": "kirby-field"
+}
