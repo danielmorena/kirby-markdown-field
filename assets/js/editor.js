@@ -23,25 +23,21 @@ var MarkdownField = function($field){
 		};
 	};
 
-	// Fix overflow bug in Panel
-	var mainEditors = $('.main .codemirror');
-	var modalEditors = $('.modal .codemirror');
-
-	function fixCodemirrorOverflow(){
-		mainEditors.css('width', $('.main .form').width());
-		modalEditors.css('width', $('.modal .form').width());
-	}
-
-	fixCodemirrorOverflow();
-	window.addEventListener('resize', throttle(fixCodemirrorOverflow, 100));
-
-	// Initialize Codemirror
 	var textarea = $field.get(0);
 	var codemirror = textarea.parentNode.querySelector('.codemirror');
 	var readOnly = codemirror.classList.contains('codemirror-is-readonly');
 	var disabled = codemirror.classList.contains('codemirror-is-disabled');
 	var hasCounter = textarea.parentNode.parentNode.querySelector('.field-counter');
 
+	// Fix overflow bug in Panel
+	function fixCodemirrorOverflow(){
+		$(codemirror).css('width', $field.parent().width());
+	}
+
+	fixCodemirrorOverflow();
+	window.addEventListener('resize', throttle(fixCodemirrorOverflow, 100));
+
+	// Initialize Codemirror
 	var options = {};
 	options.value = textarea.value;
 	options.viewportMargin = Infinity;
