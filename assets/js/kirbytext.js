@@ -1,32 +1,46 @@
 CodeMirror.defineMode('kirbytext', function (config, parserConfig) {
 	var kirbytextOverlay = {
 		start: [
-			// (tag: at beginning of line
+			// ( at beginning of line
 			{
-				regex: /\([a-z0-9]+:\s/i,
+				regex: /\((?=[a-z0-9]+:\s)/i,
 				sol: true,
 				token: 'kirbytext',
 				next: 'attribute'
 			},
-			// (tag: not at beginning and before whitespace
+			// ( after a space
 			{
-				regex: /\s\([a-z0-9]+:\s/i,
+				regex: /\s\((?=[a-z0-9]+:\s)/i,
 				token: 'kirbytext',
 				next: 'attribute'
 			}
 		],
 		attribute: [
-			// attribute: inside (tag: and with exactly one space
+			// attribute:
 			{
-				regex: /[a-z0-9]+:\s(?!\s)/i,
+				regex: /[a-z0-9]+:\s/i,
 				token: 'kirbytext',
-				next: 'attribute'
+				next: 'value'
 			},
-			// ) inside (tag:
+			// )
 			{
 				regex: /\)/,
 				token: 'kirbytext',
 				next: 'start'
+			}
+		],
+		value: [
+			// value before attribute:
+			{
+				regex: /[^\)]+?\s(?=(?:[a-z0-9]+:\s(?!\s)))/i,
+				token: 'default',
+				next: 'attribute'
+			}, 
+			// value before )
+			{
+				regex: /[^\)]+?(?=\))/i,
+				token: 'default',
+				next: 'attribute'
 			}
 		]
 	};
