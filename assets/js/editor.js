@@ -107,8 +107,8 @@ var MarkdownField = function($field){
 
 	function fixOverflowBug(){
 		var widthFactor = 1;
-		var formWidth = document.querySelector('.mainbar .form').offsetWidth;
-		if (inModal) formWidth = document.querySelector('.modal .form').offsetWidth;
+		var formWidth = document.querySelector('.mainbar .form').offsetWidth - fieldPadding;
+		if (inModal) formWidth = document.querySelector('.modal .form').offsetWidth - fieldPadding;
 
 		if (window.matchMedia('screen and (min-width:60em)').matches) {
 			if (field.classList.contains('field-grid-item-1-2') || field.classList.contains('field-grid-item-2-4')) {
