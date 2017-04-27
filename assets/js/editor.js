@@ -68,7 +68,9 @@ var MarkdownField = function($field){
 
 	$field.data('markdown', true);
 
+	//
 	// Fix overflow bug in Panel – this workaround is not ideal :(
+	//
 	function throttle(fn, threshhold, scope) {
 		threshhold || (threshhold = 250);
 		var last,
@@ -107,12 +109,12 @@ var MarkdownField = function($field){
 
 	function fixOverflowBug(){
 		var widthFactor = 1;
-		var formWidth = document.querySelector('.mainbar .form').offsetWidth - fieldPadding;
-		if (inModal) formWidth = document.querySelector('.modal .form').offsetWidth - fieldPadding;
+		var formWidth = document.querySelector('.mainbar .form').offsetWidth;
+		if (inModal) formWidth = document.querySelector('.modal .form').offsetWidth;
 
-		if (window.matchMedia('screen and (min-width:60em)').matches) {
+		if (window.matchMedia('screen and (min-width:50em)').matches) {
 			if (field.classList.contains('field-grid-item-1-2') || field.classList.contains('field-grid-item-2-4')) {
-				widthFactor = 0.5;		
+				widthFactor = 0.5;
 			}
 			else if (field.classList.contains('field-grid-item-1-3')) {
 				widthFactor = 0.333;
@@ -138,18 +140,22 @@ var MarkdownField = function($field){
 			else if (field.classList.contains('field-grid-item-4-5')) {
 				widthFactor = 0.8;
 			}
-		}
 
-		// add width to prevent text overflow
-		codemirror.style.width = ((formWidth * widthFactor) - fieldPadding) / 16 + 'em';
+			// Add width to prevent text overflow
+			codemirror.style.width = (((formWidth - fieldPadding) * widthFactor) - fieldPadding) / 16 + 'em';
+		}
+		else{
+			if (inModal) formWidth -= fieldPadding * 2;
+			codemirror.style.width = formWidth / 16 + 'em';
+		}
 	}
 
-	fixOverflowBug();	
+	fixOverflowBug();
 
-	setTimeout(function(){ 
-		// fix wrong cursor position
+	setTimeout(function(){
+		// Fix wrong cursor position
 		editor.refresh();
-		// fix modal position
+		// Fix modal position
 		if (inModal) $(document).trigger('keyup.center');
 	}, 100);
 
